@@ -11,6 +11,13 @@ bool KTSoHoanThien(int a) {
     if(sum==a){
         flag = true;
     }
+bool KTSoChinhPhuong(int a) {
+	bool flag = false;
+	for (int i = 0; i < a / 2; i++) {
+		if (i*i == a) {
+			flag = true;
+		}
+	}
 	return flag;
 }
 int main() {
@@ -22,6 +29,11 @@ int main() {
 	}
 	else{
 		 cout << a << " khong la so hoan thien." << endl;
+	if (KTSoChinhPhuong(a)) {
+		cout << a << " la so chinh phuong." << endl;
+	}
+	else{
+		 cout << a << " khong la so chinh phuong." << endl;
 	}
 	return 0;
 }
